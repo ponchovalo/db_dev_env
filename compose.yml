@@ -12,6 +12,7 @@ services:
   pgAdmin:
     depends_on:
       - db
+    container_name: pg_admin
     image: dpage/pgadmin4:8
     ports:
       - "8080:80"
@@ -19,7 +20,7 @@ services:
       - ./pgadmin:/var/lib/pgadmin #bind volume para persistir info de pgadmin 
     environment:
       - PGADMIN_DEFAULT_PASSWORD=123456
-      - PGADMIN_DEFAULT_EMAIL=ponchvoalo@outlook.com
+      - PGADMIN_DEFAULT_EMAIL=ponchovalo@outlook.com
 
 #volumes: 
 
